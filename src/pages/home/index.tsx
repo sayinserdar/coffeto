@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <Headerion >
             <>
-                <h1 className="mb-16 text-2xl lg:text-5xl text-white">I need to stop drinking coffee</h1>
+                <h1 className="text-center mb-16 text-2xl lg:text-5xl text-white">I need to stop drinking coffee</h1>
                 <CoffeeCard />
             </>
         </Headerion>
