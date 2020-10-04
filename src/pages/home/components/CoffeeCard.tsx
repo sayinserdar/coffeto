@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { ReactComponent as CoffeeIcon } from 'assets/coffee.svg';
 import { useHistory } from 'react-router-dom'
 
 const CoffeeCard = () => {
@@ -10,11 +9,9 @@ const CoffeeCard = () => {
     const hoveredBackgroundColor = isHovered ? 'bg-white' : 'bg-ocean';
 
     const onClick = () => {
-        setTimeout(() => {
-            setIsHovered(!isHovered);
-            history.push(`/history`);
-        }, 500);
-
+        localStorage.setItem(`COFFETO-HISTORY-${new Date().toLocaleDateString()}`, JSON.stringify({ date: new Date().toLocaleDateString(), counter }))
+        setIsHovered(!isHovered);
+        history.push(`/history`);
 
 
     }
@@ -22,8 +19,6 @@ const CoffeeCard = () => {
     return (
         <div className={["transition duration-500 ease-in-out flex flex-col items-center justify-start rounded-lg shadow-xl h-100 w-64 p-4", hoveredBackgroundColor].join(' ')}>
             <h1 className={["text-white text-3xl border-b-4 border-salmon mb-4 w-full", hoveredTextColor].join(' ')}>Coffeto</h1>
-
-            <p className={hoveredTextColor}>How many did you drink today ?</p>
 
             <div className="text-salmon text-5xl mb-2">{counter}</div>
 
