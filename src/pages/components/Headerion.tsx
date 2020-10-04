@@ -4,8 +4,6 @@ interface Props {
     children: React.ReactChild
 }
 
-
-
 const Headerion: React.FC<Props> = ({ children }) => {
     return (
         <div style={{
