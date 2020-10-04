@@ -6,19 +6,18 @@ import {
   // Link
 } from "react-router-dom";
 import Home from 'pages/home'
+import History from 'pages/history'
 
 const App = () => (
   <Router>
     <Switch>
-      <Route path="/about">
-        {/* <About /> */}
-      </Route>
-      <Route path="/users">
-        {/* <Users /> */}
+      <Route path="/history">
+        <History />
       </Route>
       <Route path="/">
         <Home />
       </Route>
+
     </Switch>
   </Router>
 );
